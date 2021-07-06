@@ -23,7 +23,7 @@ console.table('dopo: ', cognomi);
 var compilazione = ' ';
 
 for (var i = 0; i < cognomi.length; i++) {
-    compilazione += '<li>' + i + ' ' + cognomi[i] + '</li>'
+    compilazione += '<li>' + (i + 1) + ' ' + cognomi.sort()[i] + '</li>'
     console.log(cognomi.sort()[i]);
 }
 
