@@ -20,11 +20,14 @@ console.table('dopo: ', cognomi);
 
 // ordinamento alfabetico
 
+cognomi.sort();
+
+// stampa in html
 var compilazione = ' ';
 
 for (var i = 0; i < cognomi.length; i++) {
-    compilazione += '<li>' + (i + 1) + ' ' + cognomi.sort()[i] + '</li>'
-    console.log(cognomi.sort()[i]);
+    compilazione += '<li>' + (i + 1) + ' ' + cognomi[i] + '</li>'
+    console.log(cognomi[i]);
 }
 
 list.innerHTML = compilazione;
