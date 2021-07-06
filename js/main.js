@@ -8,10 +8,13 @@
 
 // recupero elemento html
 var list = document.getElementById('mainlist');
+var position = document.getElementById('surnameposition');
 
 // definizione array
-var cognomi = ['carbone', 'viapiana', 'massari', 'donatiello', 'ribezzo'];
+var cognomi = ['Carbone', 'Viapiana', 'Massari', 'Donatiello', 'Ribezzo'];
 console.table('prima: ', cognomi);
+
+
 
 // inseriemento cognome
 var usersurname = prompt('Aggiungi il tuo cognome alla lista');
@@ -19,15 +22,17 @@ cognomi.push(usersurname);
 console.table('dopo: ', cognomi);
 
 // ordinamento alfabetico
-
 cognomi.sort();
 
 // stampa in html
 var compilazione = ' ';
 
 for (var i = 0; i < cognomi.length; i++) {
-    compilazione += '<li>' + (i + 1) + ' ' + cognomi[i] + '</li>'
+    compilazione += '<li>' + (i + 1) + ' ' + cognomi[i] + '</li>';
     console.log(cognomi[i]);
 }
 
 list.innerHTML = compilazione;
+position.innerText = 'Il tuo cognome si trova in posizione:' + cognomi.indexOf(usersurname);
+
+
