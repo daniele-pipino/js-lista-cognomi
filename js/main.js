@@ -14,11 +14,17 @@ var cognomi = ['carbone', 'viapiana', 'massari', 'donatiello', 'ribezzo'];
 console.table('prima: ', cognomi);
 
 // inseriemento cognome
-var request = prompt('Aggiungi il tuo cognome alla lista');
-cognomi.push = request;
+var usersurname = prompt('Aggiungi il tuo cognome alla lista');
+cognomi.push(usersurname);
 console.table('dopo: ', cognomi);
 
 // ordinamento alfabetico
-for (var i = 0; i <= cognomi.length; i++) {
+
+var compilazione = ' ';
+
+for (var i = 0; i < cognomi.length; i++) {
+    compilazione += '<li>' + i + ' ' + cognomi[i] + '</li>'
     console.log(cognomi.sort()[i]);
 }
+
+list.innerHTML = compilazione;
